@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1084367983656",
+    "firebase_url": "https://papagomap-d47ed.firebaseio.com",
+    "project_id": "papagomap-d47ed",
+    "storage_bucket": "papagomap-d47ed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1084367983656:android:7e114014bf0bdf22",
+        "android_client_info": {
+          "package_name": "ro.softronic.mihai.papagomap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1084367983656-9504tgmsq3tmhsbe3gdk8r98cga11i3a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDImlZ8l0iKq6N8-AfZKDHdKv__9x3QgIs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
