@@ -16,6 +16,7 @@
 
 package ro.softronic.mihai.papagomap.Services;
 
+import android.R;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -24,11 +25,11 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
-import ro.softronic.mihai.papagomap.Activities.MainActivity;
-import android.R;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
+
+import ro.softronic.mihai.papagomap.Activities.MainActivity;
 
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
@@ -57,6 +58,12 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
         if (remoteMessage.getFrom().equals("/topics/" + MyFirebaseInstanceIDService.infoTopicName)){
             sendNotification(remoteMessage.getData().get("title"));
+            String title  = remoteMessage.getData().get("title");
+            Intent intent = new Intent();
+            intent.putExtra("extra", title);
+            intent.setAction("com.my.app.onMessageReceived");
+            sendBroadcast(intent);
+//            LocalBroadcastManager.getInstance(this).sendBroadcast(intent);
         }
         Log.d(TAG, "From: " + remoteMessage.getFrom());
 

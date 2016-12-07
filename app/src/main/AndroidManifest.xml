@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ro.softronic.mihai.papagomap">
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -31,6 +33,12 @@
             </intent-filter>
         </service>
         <!-- [END firebase_iid_service] -->
+        <service android:name=".Services.SendGPSPositionService" android:process=":my_service" />
+        <!--<receiver android:name=".Activities.MainActivity$Receiver">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.my.app.onMessageReceived" />-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
     </application>
 
 </manifest>
